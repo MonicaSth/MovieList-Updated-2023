@@ -39,6 +39,7 @@
  use the dummy account to see how it works.
 
   dummy email: test@yahoo.com
+  
   dummy password: testpassword
   
   Even if you create an account, we will NOT use your informations in
