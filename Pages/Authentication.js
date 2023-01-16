@@ -23,9 +23,9 @@ const Authentication = () => {
     setIsLoading(true);
     let url;
     if (isLoginMode) {
-      url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDMxLSQzPRLTp-xiuzzzaNy1kYLc--S5cg`;
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${ApiKey}`;
     } else {
-      url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDMxLSQzPRLTp-xiuzzzaNy1kYLc--S5cg`;
+      url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${ApiKey}`;
     }
 
     fetch(url, {
