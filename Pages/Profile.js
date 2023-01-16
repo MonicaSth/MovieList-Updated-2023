@@ -65,7 +65,7 @@ const Profile = () => {
     let response;
     try {
       response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDMxLSQzPRLTp-xiuzzzaNy1kYLc--S5cg",
+        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=${ApiKey}",
         {
           method: "POST",
           body: JSON.stringify({
@@ -95,7 +95,7 @@ const Profile = () => {
   async function postMovies(movies) {
     if (movies) {
       const response = await fetch(
-        `https://movie-list-8ee11-default-rtdb.europe-west1.firebasedatabase.app/movies/${userName}.json`,
+        `https://movie-list-DUMMY-default-rtdb.europe-west1.firebasedatabase.app/movies/${userName}.json`,
         {
           method: "POST",
           body: JSON.stringify(movies),
@@ -117,7 +117,7 @@ const Profile = () => {
   async function getMoviesFromDB() {
     setErrorPassword(false);
     const response = await fetch(
-      `https://movie-list-8ee11-default-rtdb.europe-west1.firebasedatabase.app/movies/${userName}.json`
+      `https://movie-list-DUMMY-default-rtdb.europe-west1.firebasedatabase.app/movies/${userName}.json`
     );
     if (!response.ok) {
       throw new Error("Something went Wrong!");
