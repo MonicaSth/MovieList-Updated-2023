@@ -1,0 +1,78 @@
+.headercl {
+  display: flex;
+  position: relative;
+  top: 0px;
+  background-color: rgb(25, 29, 49);
+  box-shadow: 1px 3px 5px rgb(116, 116, 148);
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.basic {
+  padding-right: 0.5rem;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+.switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.switch nav li {
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  margin-left: 0rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  padding-top: 0.4rem;
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+.nav a {
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  color: #e6fcfc;
+}
+
+@media only screen and (max-width: 870px) {
+  .nav li {
+    margin-left: 0.6rem;
+  }
+  .switch nav li {
+    padding-right: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .nav li {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 288px) {
+  .switch {
+    display: none;
+  }
+}

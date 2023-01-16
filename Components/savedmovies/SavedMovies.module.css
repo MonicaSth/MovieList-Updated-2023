@@ -1,0 +1,207 @@
+.star {
+  color: grey;
+  /* font-size: 0.8rem; */
+  transform: scale(0.8);
+}
+
+.active,
+.star:hover {
+  color: orange;
+}
+
+.Favorites {
+  display: flex;
+  flex-direction: row;
+  /* height: auto; */
+}
+
+.rank {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.descriptiom {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.favorite {
+  box-shadow: 2px 2px 7px rgb(116, 116, 148);
+  height: max-content;
+  min-height: 370px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.FavoritList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-bottom: inherit;
+  margin-bottom: 50px;
+  height: auto;
+}
+
+.FavoritListWr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow: auto;
+  padding: 10px;
+  padding-bottom: inherit;
+  margin-bottom: 50px;
+  height: auto;
+}
+.movie_item {
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 5%;
+  box-shadow: 2px 2px 7px rgb(116, 116, 148);
+  height: 290px;
+  margin: 10px;
+  width: 142px;
+  margin-bottom: 15px;
+}
+
+.movie_poster img {
+  border: 1px solid gray;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  max-height: 185px;
+  width: 140px;
+}
+.movie_poster {
+  position: relative;
+}
+
+.movie_poster .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: rgb(54, 52, 52);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 85%;
+  /* left: 10%; */
+  margin-left: -120px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.movie_poster:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.movie_title {
+  width: 134px;
+  padding-left: 5px;
+  font-size: 0.9em;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  word-wrap: normal;
+  font-weight: 700;
+  height: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 134px;
+}
+
+.starRating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-top: 2px;
+  height: auto;
+}
+.rating {
+  padding: 3px;
+  font-size: 1em;
+  /* border: 1px solid rgb(116, 116, 148); */
+  box-shadow: 3px 4px 7px rgb(116, 116, 148);
+  border-radius: 50%;
+}
+
+.star {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* size: 4px; */
+  padding-top: 1px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+button {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.deleteAll {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.deleteAll button {
+  background-color: transparent;
+  color: rgb(122, 121, 121);
+  border: 0px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.deleteAll button:hover {
+  color: rgb(255, 7, 7);
+  font-size: larger;
+}
+
+.button :hover .trashButton {
+  color: rgb(255, 7, 7);
+  font-size: xx-large;
+}
+
+@media only screen and (max-width: 768px) {
+  .favorite {
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+  }
+  .movie_item {
+    height: 275px;
+    margin: 7px;
+  }
+}

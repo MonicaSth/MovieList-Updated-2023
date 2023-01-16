@@ -1,0 +1,106 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 350px;
+  justify-content: center;
+  box-shadow: 1px 4px 7px rgb(116, 116, 148);
+  padding: 60px;
+  padding-left: 70px;
+  width: 100%;
+  height: auto;
+}
+
+.componentform {
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  min-height: 350px;
+  justify-content: center;
+  box-shadow: 1px 4px 7px rgb(116, 116, 148);
+  padding: 60px;
+  padding-left: 70px;
+  /* max-width: 400px; */
+  height: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.list {
+  margin-top: 35px;
+  padding: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.emailPass {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  flex-direction: column;
+  padding: 10px;
+}
+.emailPass input {
+  padding: 5px;
+  background-color: inherit;
+  color: rgb(104, 95, 95);
+  margin: 5px;
+  box-shadow: 2px 1px 10px rgb(116, 116, 148);
+}
+
+.emailPassSub {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  /* width: 200px; */
+  padding: 10px;
+}
+.span {
+  text-align: center;
+}
+.button {
+  padding: 10px;
+  background-color: inherit;
+  color: rgb(104, 95, 95);
+  margin: 10px;
+  box-shadow: 2px 1px 10px rgb(116, 116, 148);
+  font-size: medium;
+  cursor: pointer;
+  max-width: 200px;
+  border: 1px solid gray;
+}
+
+button:hover {
+  color: rgb(94, 94, 201);
+  font-size: larger;
+}
+
+.logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+  .component {
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+  }
+}

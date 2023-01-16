@@ -1,0 +1,10 @@
+.theme {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 588px) {
+  label {
+    display: none;
+    overflow: hidden;
+  }
+}
