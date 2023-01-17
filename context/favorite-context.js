@@ -24,27 +24,31 @@ const FavoriteContextProvider = (props) => {
 
   const handleAddMovie = (movie) => {
     const movies = favorites;
+    let actual;
     const exists = movies.filter((item) => item.id === movie.id);
-
     if (movies.length > 0 && exists.length === 0) {
       setFavorites([...movies, movie]);
+      actual = [...movies, movie];
     } else if (movies.length > 0 && exists.length > 0) {
       return;
-    } else {
+    } else if (movies.length === 0) {
       setFavorites([movie]);
+      actual = [movie];
     }
-    window.localStorage.setItem("saved-movies", JSON.stringify(favorites));
+    window.localStorage.setItem("saved-movies", JSON.stringify(actual));
   };
 
   const handleDeleteMovie = (movieId) => {
     const movies = favorites;
+    let actual;
     setoOpenSnack(true);
     setTimeout(function () {
       setoOpenSnack(false);
     }, 2000);
     if (movies.length > 1) {
       setFavorites(movies.filter((item) => item.id !== movieId));
-      window.localStorage.setItem("saved-movies", JSON.stringify(favorites));
+      actual = movies.filter((item) => item.id !== movieId);
+      window.localStorage.setItem("saved-movies", JSON.stringify(actual));
     } else if (movies.length === 1) {
       setFavorites([]);
       window.localStorage.removeItem("saved-movies");
